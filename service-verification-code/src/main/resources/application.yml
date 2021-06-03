@@ -7,3 +7,5 @@ eureka:
 spring:
   application:
     name: service-verification-code
+  redis:
+    host: 127.0.0.1
