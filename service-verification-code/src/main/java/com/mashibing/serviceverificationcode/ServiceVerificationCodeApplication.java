@@ -15,6 +15,6 @@ public class ServiceVerificationCodeApplication {
 
     @GetMapping
     public String test(){
-        return "mengze 最帅了";
+        return "短信验证服务";
     }
 }

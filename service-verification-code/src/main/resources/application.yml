@@ -1,11 +1,17 @@
+
 server:
   port: 8082
 
-eureka:
-  client:
-    enabled: false
 spring:
   application:
     name: service-verification-code
-  redis:
-    host: 127.0.0.1
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7900/eureka/
+    registry-fetch-interval-seconds: 30
+    enabled: true
+    #,http://localhost:7901/eureka/,http://localhost:7902/eureka/
+  instance:
+    lease-renewal-interval-in-seconds: 30
