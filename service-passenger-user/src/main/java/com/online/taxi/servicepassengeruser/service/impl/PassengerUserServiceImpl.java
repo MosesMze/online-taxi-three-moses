@@ -58,6 +58,7 @@ public class PassengerUserServiceImpl implements PassengerUserService {
     }
 
     public int setExpireToken(String passengerId){
+        System.out.println("passengerId:"+passengerId);
         String key = RedisKeyPrefixConstant.PASSENGER_LOGIN_TOKEN_APP_KEY_PRE + passengerId;
         redisTemplate.delete(key);
         return 1;

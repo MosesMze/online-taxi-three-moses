@@ -23,8 +23,7 @@ public class ServicePassengerUserInfo implements Serializable {
     private String passengerPhone;
 
     /**
-     * 乘客姓名
-     */
+     * 乘客姓名*/
     private String passengerName;
 
     /**

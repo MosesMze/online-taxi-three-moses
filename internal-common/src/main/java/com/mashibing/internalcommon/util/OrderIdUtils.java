@@ -1,10 +1,14 @@
 package com.mashibing.internalcommon.util;
 
 import org.apache.commons.lang.RandomStringUtils;
+import org.apache.commons.lang.time.DateFormatUtils;
+import org.apache.commons.lang.time.DateUtils;
 
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
+import java.util.Date;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class OrderIdUtils {
 

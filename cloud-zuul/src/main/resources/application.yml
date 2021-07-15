@@ -16,7 +16,7 @@ spring:
          #数据库连接用户名
     username: root
          #数据库连接密码
-    password: root
+    password: 123456
          #进行数据库连接池的配置
     dbcp2:
              #初始化提供的连接数
@@ -43,7 +43,7 @@ mybatis:
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka-7900:7900/eureka/
+      defaultZone: http://localhost:7900/eureka/
     enabled: true
   instance:
     hostname: localhost

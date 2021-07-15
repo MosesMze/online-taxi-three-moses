@@ -3,7 +3,10 @@ package com.mashibing.internalcommon.util;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
+import lombok.Data;
 
+import java.io.UnsupportedEncodingException;
+import java.util.Base64;
 import java.util.Date;
 
 /**

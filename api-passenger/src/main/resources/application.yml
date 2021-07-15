@@ -22,7 +22,7 @@ logging:
 #    enabled: true
 #    clients: demo
 
-# ÅäÖÃ»Ò¶È ·¢²¼
+# é…ç½®ç°åº¦ å‘å¸ƒ
 #service-sms:
 #  ribbon:
 #    NFLoadBalancerRuleClassName: com.mashibing.apipassenger.gray.GrayRule

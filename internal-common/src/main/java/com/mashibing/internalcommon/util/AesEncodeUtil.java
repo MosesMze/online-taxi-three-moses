@@ -1,12 +1,13 @@
 package com.mashibing.internalcommon.util;
 
-import sun.misc.BASE64Decoder;
-import sun.misc.BASE64Encoder;
+import java.io.UnsupportedEncodingException;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
-import java.io.UnsupportedEncodingException;
+
+import sun.misc.BASE64Decoder;
+import sun.misc.BASE64Encoder;
 
 /**
  * AES加密工具类

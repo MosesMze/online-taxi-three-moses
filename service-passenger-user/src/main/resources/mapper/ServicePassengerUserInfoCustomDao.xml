@@ -4,7 +4,7 @@
   <select id="selectByPhoneNumber" resultMap="com.online.taxi.servicepassengeruser.dao.ServicePassengerUserInfoDao.BaseResultMap" parameterType="java.lang.String" >
     select
     <include refid="com.online.taxi.servicepassengeruser.dao.ServicePassengerUserInfoDao.Base_Column_List" />
-    from passenger_user_info
+    from service_passenger_user_info
     where passenger_phone = #{passengerPhone}
   </select>
 </mapper>

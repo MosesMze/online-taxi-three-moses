@@ -1,9 +1,8 @@
 package com.mashibing.apipassenger.controller;
 
-import com.mashibing.apipassenger.request.ShortMsgRequest;
-import com.mashibing.apipassenger.service.VerificationCodeService;
+import com.mashibing.apipassenger.request.UserAuthRequest;
+import com.mashibing.apipassenger.service.AuthService;
 import com.mashibing.internalcommon.dto.ResponseResult;
-import com.mashibing.internalcommon.dto.servicesms.request.SmsSendRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,15 +11,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/verify-code")
-public class VerificationCodeController {
+@RequestMapping("/auth")
+public class AuthController {
 
     @Autowired
-    private VerificationCodeService verificationCodeService;
+    private AuthService authService;
 
-    @PostMapping("/send")
-    public ResponseResult send(@RequestBody @Validated ShortMsgRequest request){
+    @PostMapping("/login")
+    public ResponseResult login(@RequestBody @Validated UserAuthRequest userAuthRequest) {
 
-        return verificationCodeService.send(request.getPhoneNumber());
+        String passengerPhone = userAuthRequest.getPassengerPhone();
+        String code = userAuthRequest.getCode();
+
+        return authService.auth(passengerPhone , code);
+
     }
 }
